@@ -12,7 +12,7 @@ let make = _children => {
   ...component,
   render: _self =>
     <div className=Styles.container>
-      /* Add a Header right here */
+      <Header/>
       <MessagesContainer />
       <AddMessage />
       <NewMessageNotification />

@@ -2,10 +2,18 @@ let component = ReasonReact.statelessComponent("Messages");
 
 let make = (
   ~messages,
+ ~onLoad,
   _children
 ) => {
   ...component,
+  didMount: _self => {
+    onLoad()
+  },
   render: _self => <div>
-    /* Map on all messages and pass each message in the ChatBubble component */
+    {
+      messages
+      |> Js.Array.map(message => <ChatBubble  message key=message##id/>)
+      |> ReasonReact.array
+    }
   </div>
 };

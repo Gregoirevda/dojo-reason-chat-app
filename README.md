@@ -112,7 +112,12 @@ let _unsubscribe = subscribeToMore(
 Write the subscription (copy paste the one you used in the playground)
 Use the Subscription component to be notified of a subscription.
 Everytime you have data, render a HTML5 `àudio` with `àutoPlay`. You have a notification.ogg and notification.mp3 available
-
+```
+<audio autoPlay=true>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+</audio>
+```
 
 
 ## Congrats!

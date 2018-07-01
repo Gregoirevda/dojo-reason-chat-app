@@ -1,4 +1,5 @@
 ReactDOMRe.renderToElementWithId(
-    <App />,
-  "root",
-);
+    <ReasonApollo.Provider client=ReasonApolloClient.instance>
+        <App />
+    </ReasonApollo.Provider>
+  , "root");
